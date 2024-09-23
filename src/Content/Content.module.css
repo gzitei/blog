@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  grid-area: content;
+  min-height: calc(100vh - (var(--footer-h) + var(--header-h) + 2px));
+  margin: 0 auto;
+  border-width: .05px;
+  border-style: solid;
+  border-image: linear-gradient(to right, transparent, white, transparent) 1;
+  border-image-slice: 1;
+  padding: 20px;
+}

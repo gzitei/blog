@@ -1,0 +1,25 @@
+.heading {
+  display: block;
+  margin-bottom: 1.5ch;
+  width: 100%;
+}
+
+.card-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5ch;
+  width: 100%;
+  align-content: start;
+}
+
+.layout-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  align-content: start;
+}
+
+.layout-wrapper>* {
+  grid-column: 1 / -1;
+}

@@ -1,0 +1,33 @@
+.art {
+  width: 100%;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.art pre {
+  background-color: #3f3f3f;
+  padding: 10px 5px;
+  border-radius: 10px;
+  overflow-x: auto;
+  line-height: 1.5;
+  margin: 20px 0px;
+}
+
+.art code {
+  margin: 0 auto;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.art a {
+  font-weight: bold;
+}
+
+.art a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  text-decoration-color: red;
+}
