@@ -1,6 +1,6 @@
 import { Post } from "../Content";
 import styles from "./Card.module.css";
-import { Link } from "react-router-dom";
+import BlogLink from "../BlogLink";
 
 const Card = (props: Post) => {
   const prefix =
@@ -8,7 +8,7 @@ const Card = (props: Post) => {
   const img = `${prefix}/${props.id}/${props.image}`;
   return (
     <>
-      <Link to={`/blog/article/${props.id}`} className={styles.card}>
+      <BlogLink to={`/article/${props.id}`} className={styles.card}>
         <article>
           <img src={img} alt={props.title} />
           <div className={styles["card-content"]}>
@@ -16,7 +16,7 @@ const Card = (props: Post) => {
             <p>{props["posted-at"]}</p>
           </div>
         </article>
-      </Link>
+      </BlogLink>
     </>
   );
 };

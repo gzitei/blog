@@ -1,29 +1,29 @@
-import { Link } from "react-router-dom";
+import BlogLink from "../BlogLink";
 import styles from "./Header.module.css";
 const Header = () => {
   return (
     <>
       <header className={styles.header}>
         <div className={styles.nav}>
-          <Link to="/blog" className={`${styles.title} ${styles.link}`}>
+          <BlogLink to="/" className={`${styles.title} ${styles.link}`}>
             It Works on My Machine
-          </Link>
+          </BlogLink>
           <nav className={styles.menu}>
             <ul>
               <li>
-                <Link to="/blog" className={styles.link}>
+                <BlogLink to="/" className={styles.link}>
                   Posts
-                </Link>
+                </BlogLink>
               </li>
               <li>
-                <Link to="/blog/tags" className={styles.link}>
+                <BlogLink to="/tags" className={styles.link}>
                   Tags
-                </Link>
+                </BlogLink>
               </li>
               <li>
-                <Link to="/blog/about" className={styles.link}>
+                <BlogLink to="/about" className={styles.link}>
                   About
-                </Link>
+                </BlogLink>
               </li>
             </ul>
           </nav>

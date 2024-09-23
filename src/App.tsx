@@ -9,8 +9,7 @@ import CardContainer from "./CardContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-//TODO make app responsive
-//TODO improve route handling with blog prefix
+const prefix = "/blog";
 
 function App() {
   const queryClient = new QueryClient({
@@ -28,11 +27,14 @@ function App() {
             <Header />
             <Content>
               <Routes>
-                <Route path="/blog" element={<CardContainer />}></Route>
-                <Route path="/blog/article/:id" element={<Article />}></Route>
-                <Route path="/blog/tags" element={<Tags />}></Route>
-                <Route path="/blog/about" element={<About />}></Route>
-                <Route path="/*" element={<h2>Content not found!</h2>}></Route>
+                <Route path="/" element={<CardContainer />}></Route>
+                <Route path={prefix + "/"} element={<CardContainer />}></Route>
+                <Route
+                  path={prefix + "/article/:id"}
+                  element={<Article />}
+                ></Route>
+                <Route path={prefix + "/tags"} element={<Tags />}></Route>
+                <Route path={prefix + "/about"} element={<About />}></Route>
               </Routes>
             </Content>
             <Footer />

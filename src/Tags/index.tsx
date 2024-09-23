@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./Tags.module.css";
 import { Data, DataContext, Post } from "../Content";
-import { Link } from "react-router-dom";
+import BlogLink from "../BlogLink";
 
 const Tags = () => {
   const data = useContext<Data>(DataContext);
@@ -30,7 +30,7 @@ const Tags = () => {
 
 const Tag = (tag: string) => {
   const text = tag.replace("#", "");
-  return <Link to={`/blog/?tag=${text}`}>{tag}</Link>;
+  return <BlogLink to={`/?tag=${text}`}>{tag}</BlogLink>;
 };
 
 export default Tags;
