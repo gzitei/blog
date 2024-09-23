@@ -8,7 +8,7 @@ const Card = (props: Post) => {
   const img = `${prefix}/${props.id}/${props.image}`;
   return (
     <>
-      <Link to={`/article/${props.id}`} className={styles.card}>
+      <Link to={`/blog/article/${props.id}`} className={styles.card}>
         <article>
           <img src={img} alt={props.title} />
           <div className={styles["card-content"]}>

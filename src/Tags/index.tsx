@@ -30,7 +30,7 @@ const Tags = () => {
 
 const Tag = (tag: string) => {
   const text = tag.replace("#", "");
-  return <Link to={`/?tag=${text}`}>{tag}</Link>;
+  return <Link to={`/blog/?tag=${text}`}>{tag}</Link>;
 };
 
 export default Tags;

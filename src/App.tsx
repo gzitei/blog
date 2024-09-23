@@ -27,10 +27,10 @@ function App() {
             <Header />
             <Content>
               <Routes>
-                <Route path="/" element={<CardContainer />}></Route>
-                <Route path="/article/:id" element={<Article />}></Route>
-                <Route path="/tags" element={<Tags />}></Route>
-                <Route path="/about" element={<About />}></Route>
+                <Route path="/blog" element={<CardContainer />}></Route>
+                <Route path="/blog/article/:id" element={<Article />}></Route>
+                <Route path="/blog/tags" element={<Tags />}></Route>
+                <Route path="/blog/about" element={<About />}></Route>
                 <Route path="/*" element={<h2>Content not found!</h2>}></Route>
               </Routes>
             </Content>
