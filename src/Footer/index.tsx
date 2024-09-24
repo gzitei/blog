@@ -5,7 +5,11 @@ const Footer = () => {
     <>
       <footer className={styles.footer}>
         <div className={styles.signature}>
-          <p> Gustavo Zitei Vicente - {year} | All rights reserved. </p>
+          <p>
+            {" "}
+            Gustavo Zitei Vicente - {year == 2024 ? year : `2024-${year}`}{" "}
+          </p>
+          <p> All rights reserved. </p>
         </div>
         <div className={styles["social-media"]}>
           <a href="https://www.linkedin.com/in/gzvicente/en" target="_blank">

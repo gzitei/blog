@@ -11,9 +11,9 @@ const Card = (props: Post) => {
       <BlogLink to={`/article/${props.id}`} className={styles.card}>
         <article>
           <img src={img} alt={props.title} />
+          <p>{props["posted-at"]}</p>
           <div className={styles["card-content"]}>
             <h2>{props.title}</h2>
-            <p>{props["posted-at"]}</p>
           </div>
         </article>
       </BlogLink>

@@ -1,3 +1,13 @@
+:root {
+  --n-col: 3;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --n-col: 1;
+  }
+}
+
 .heading {
   display: block;
   margin-bottom: 1.5ch;
@@ -7,10 +17,13 @@
 .card-container {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--n-col), 1fr);
   gap: 1.5ch;
   width: 100%;
   align-content: start;
+  justify-content: center;
+  width: fit-content;
+
 }
 
 .layout-wrapper {

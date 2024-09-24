@@ -7,5 +7,5 @@
   border-style: solid;
   border-image: linear-gradient(to right, transparent, white, transparent) 1;
   border-image-slice: 1;
-  padding: 20px;
+  padding: 10px;
 }

@@ -7,7 +7,7 @@
 
 :root {
   --footer-h: 80px;
-  --header-h: 80px;
+  --header-h: 100px;
   font-size: 14pt;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -21,10 +21,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --w: 80ch;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --w: 35ch;
+  }
+}
+
 body {
   background-color: #131119;
   margin: 0 auto;
-  width: 85ch;
+  width: var(--w);
 }
 
 .container {

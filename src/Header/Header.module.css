@@ -1,3 +1,15 @@
+:root {
+  --header-mode: flex;
+  --align-opt: flex-end;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --header-mode: block;
+    --align-opt: center;
+  }
+}
+
 .header {
   grid-area: header;
   height: var(--header-h);
@@ -6,7 +18,7 @@
 }
 
 .title {
-  display: flex;
+  display: var(--header-mode);
   align-items: center;
   flex: 2;
   font-size: 22pt;
@@ -18,7 +30,7 @@
 }
 
 .nav {
-  display: flex;
+  display: var(--header-mode);
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -38,7 +50,7 @@
 .menu {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: var(--align-opt);
   flex: 3;
   font-size: 16pt;
 }

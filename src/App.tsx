@@ -9,8 +9,6 @@ import CardContainer from "./CardContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-//TODO make app responsive
-
 const prefix = "/blog";
 
 function App() {
