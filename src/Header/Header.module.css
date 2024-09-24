@@ -23,6 +23,7 @@
   flex: 2;
   font-size: 22pt;
   padding: 5px 10px;
+  text-align: center;
 }
 
 .title .link:hover {
