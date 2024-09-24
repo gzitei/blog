@@ -1,10 +1,16 @@
 :root {
-  --n-col: 3;
+  --n-col: 1;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 550px) {
   :root {
-    --n-col: 1;
+    --n-col: 2;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    --n-col: 3;
   }
 }
 

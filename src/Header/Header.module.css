@@ -3,7 +3,7 @@
   --align-opt: flex-end;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 680px) {
   :root {
     --header-mode: block;
     --align-opt: center;
@@ -20,7 +20,7 @@
 .title {
   display: var(--header-mode);
   align-items: center;
-  flex: 2;
+  flex: 1;
   font-size: 22pt;
   padding: 5px 10px;
   text-align: center;
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: var(--align-opt);
-  flex: 3;
+  flex: 1;
   font-size: 16pt;
 }
 

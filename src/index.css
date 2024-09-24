@@ -22,13 +22,7 @@
 }
 
 :root {
-  --w: 80ch;
-}
-
-@media (max-width: 500px) {
-  :root {
-    --w: 35ch;
-  }
+  --w: min(100vw, 80ch);
 }
 
 body {
