@@ -20,17 +20,25 @@ const Tags = () => {
   }, [data]);
 
   return (
-    <div className={styles.block}>
-      <h2>Tags by subject</h2>
-      <p>Filter content by tag</p>
-      <article>{tags.map(Tag)}</article>
+    <div>
+      <div className={styles.heading}>
+        <h2>Tags by subject</h2>
+        <p>Filter content by tag</p>
+      </div>
+      <div className={styles.block}>
+        <article>{tags.map(Tag)}</article>
+      </div>
     </div>
   );
 };
 
 const Tag = (tag: string) => {
   const text = tag.replace("#", "");
-  return <BlogLink to={`/?tag=${text}`}>{tag}</BlogLink>;
+  return (
+    <BlogLink key={text} to={`/?tag=${text}`}>
+      {tag}
+    </BlogLink>
+  );
 };
 
 export default Tags;

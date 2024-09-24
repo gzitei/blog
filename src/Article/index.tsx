@@ -3,9 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import { Loading } from "../Content";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import "highlight.js/styles/github-dark.min.css";
+import hljs from "highlight.js";
+import { useEffect } from "react";
 import styles from "./Article.module.css";
-
-//TODO add syntax highlighting
 
 const Article = () => {
   const { id } = useParams();
@@ -15,15 +16,24 @@ const Article = () => {
     queryFn: () => fetchArticle(id!),
   });
 
+  useEffect(() => {
+    if (data) {
+      hljs.highlightAll();
+    }
+  }, [data]);
+
   if (isLoading) return <Loading />;
+  const articleHtml = parseMarkdown(data!);
 
   return (
     <>
-      <article className={`${styles.art}`}>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{data}</ReactMarkdown>
-      </article>
+      <article className={`${styles.art}`}>{articleHtml}</article>
     </>
   );
+};
+
+const parseMarkdown = (data: string) => {
+  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{data}</ReactMarkdown>;
 };
 
 const fetchArticle = async (id: string) => {

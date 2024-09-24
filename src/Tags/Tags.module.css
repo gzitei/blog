@@ -1,5 +1,11 @@
-.block {
+.heading {
   display: block;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .block a {
@@ -7,6 +13,7 @@
   font-size: 15pt;
   padding: 8px 12px;
   border-radius: 10px;
+  background-color: rgba(63, 63, 63, .2);
 }
 
 .block a:hover {
@@ -20,4 +27,7 @@
 
 .block article {
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }

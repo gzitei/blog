@@ -19,7 +19,7 @@
 }
 
 .art pre {
-  background-color: #3f3f3f;
+  background-color: rgba(63, 63, 63, .2);
   padding: 10px 5px;
   border-radius: 10px;
   overflow-x: auto;
@@ -31,6 +31,7 @@
   margin: 0 auto;
   font-family: monospace;
   font-size: 14px;
+  background: none i !important;
 }
 
 .art a {

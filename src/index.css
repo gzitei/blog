@@ -53,3 +53,9 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
+
+.hljs {
+  background: none !important;
+  color: none !important;
+}
