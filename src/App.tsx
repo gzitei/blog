@@ -9,6 +9,8 @@ import CardContainer from "./CardContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
+const prefix = "/blog";
+
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -26,10 +28,10 @@ function App() {
             <Content>
               <Routes>
                 <Route path="/" element={<CardContainer />} />
-                <Route path="/" element={<CardContainer />} />
-                <Route path="/article/:id" element={<Article />} />
-                <Route path="/tags" element={<Tags />} />
-                <Route path="/about" element={<About />} />
+                <Route path={prefix + "/"} element={<CardContainer />} />
+                <Route path={prefix + "/article/:id"} element={<Article />} />
+                <Route path={prefix + "/tags"} element={<Tags />} />
+                <Route path={prefix + "/about"} element={<About />} />
                 <Route path="/*" element={<h2>Content not found!</h2>} />
               </Routes>
             </Content>
