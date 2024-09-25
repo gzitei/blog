@@ -7,7 +7,7 @@ import About from "./About";
 import ErrorBoundary from "./ErrorBoundary";
 import CardContainer from "./CardContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 const prefix = "/blog";
 
@@ -21,7 +21,7 @@ function App() {
   });
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <QueryClientProvider client={queryClient}>
           <ErrorBoundary>
             <Header />
@@ -38,7 +38,7 @@ function App() {
             <Footer />
           </ErrorBoundary>
         </QueryClientProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
