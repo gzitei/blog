@@ -29,6 +29,7 @@ body {
   background-color: #131119;
   margin: 0 auto;
   width: var(--w);
+  height: 100dvh;
 }
 
 .container {
