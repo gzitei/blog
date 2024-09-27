@@ -46,14 +46,17 @@
   text-decoration-color: red;
 }
 
-.art p,
-h1,
+.art p {
+  margin: 10px 0;
+}
+
+.art h1,
 h2,
 h3,
 h4,
 h5,
 h6,
 pre {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 12px;
 }
