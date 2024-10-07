@@ -60,3 +60,11 @@ pre {
   margin-top: 24px;
   margin-bottom: 12px;
 }
+
+.art img {
+  max-width: var(--art-width);
+  max-height: 600px;
+  aspect-ratio: initial;
+  margin: 20px auto;
+  display: block;
+}

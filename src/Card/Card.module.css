@@ -40,8 +40,8 @@
 
 .card-content h2 {
   margin: 0;
-  font-size: 16pt;
-  line-height: 1.4;
+  font-size: 14pt;
+  line-height: 1.8;
 }
 
 .card:hover h2 {
@@ -49,7 +49,7 @@
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
   text-decoration-color: red;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 .card:hover img {
@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 12pt;
+  font-size: 10pt;
   color: black;
   opacity: 1;
 }
